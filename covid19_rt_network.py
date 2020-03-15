@@ -7,11 +7,7 @@ import os
 
 #NICK PERRA GOOD !!!! !!! !!! !!!! !!! !!! !!!! !!! !!! !!!!
 
-#raise RuntimeError('This error is here to keep you from accidentally restarting the auth process.'
-                   #' Read and follow the directions!')
-
 def api_connection():
-
 
     api_key = os.getenv('TW_API_KEY')
     api_secret_key = os.getenv('TW_API_SECRET_KEY')
@@ -19,8 +15,7 @@ def api_connection():
     user = os.getenv('TW_USER')
     pwd = os.getenv('TW_PWD')
 
-    #defining the functions that will 
-
+    #defining the functions that will set up the authenticator, navigating to twitter, getting the verifier, verifying the authenicator, and getting some tweets. 
     def auth():
         global auth_obj
         auth_obj = tweepy.OAuthHandler(api_key, api_secret_key)

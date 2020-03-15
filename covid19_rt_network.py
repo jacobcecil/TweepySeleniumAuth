@@ -5,6 +5,8 @@ import selenium.webdriver as driver
 import os
 
 
+#NICK PERRA GOOD !!!! !!! !!! !!!! !!! !!! !!!! !!! !!! !!!!
+
 #raise RuntimeError('This error is here to keep you from accidentally restarting the auth process.'
                    #' Read and follow the directions!')
 
@@ -57,7 +59,7 @@ def api_connection():
         max_tweets = 3200
         
         global collection
-        #collection = tweepy.Cursor(api.search, q='COVID-19', rpp=100, count=1000)
+        collection = tweepy.Cursor(api.search, q='COVID-19', rpp=100, count=1000)
         print(len(list(collection.items(max_tweets))))
             
 

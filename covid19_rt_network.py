@@ -33,7 +33,7 @@ def api_connection():
 
         #user the chrome browser to retrieve our verifier
         global chrome
-        chrome = driver.Chrome(chrome_options = options, executable_path = r'C:\Users\jacob\Documents\COVID-19 Twitter Network\chromedriver.exe')
+        chrome = driver.Chrome(chrome_options = options, executable_path = r'C:\Users\jacob\Documents\COVID19_RTMT_Network\chromedriver.exe')
         chrome.get(url)
         chrome.find_element_by_id('username_or_email').send_keys(user)
         chrome.find_element_by_id('password').send_keys(pwd)

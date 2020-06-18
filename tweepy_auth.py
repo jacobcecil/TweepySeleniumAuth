@@ -4,14 +4,13 @@ import matplotlib as mpl
 import selenium.webdriver as driver
 import os
 
-
-#NICK PERRA GOOD !!!! !!! !!! !!!! !!! !!! !!!! !!! !!! !!!!
-
 def api_connection():
-
+    
+    #add your API keys to the environment variables prior to running 
     api_key = os.getenv('TW_API_KEY')
     api_secret_key = os.getenv('TW_API_SECRET_KEY')
 
+    #add your twitter credentials to the environment variables prior to running
     user = os.getenv('TW_USER')
     pwd = os.getenv('TW_PWD')
 
@@ -54,13 +53,16 @@ def api_connection():
         #arbitrarily lorge number
         max_tweets = 3200
         
+        #our query for tweet keywords
+        qkwd = 'COVID-19'
+        
         global collection
-        collection = tweepy.Cursor(api.search, q='COVID-19', rpp=100, count=1000)
+        collection = tweepy.Cursor(api.search, q=qkwd, rpp=100, count=1000)
         print(len(list(collection.items(max_tweets))))
             
 
     
-    #calling the functions above
+    #calling the inner functions
     auth()
     get_auth_url(auth_obj)
     get_verified_api(redirect_url)

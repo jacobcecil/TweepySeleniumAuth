@@ -5,3 +5,4 @@ This repository contains a python script that automates the authentication proce
 
 <b>The script uses uses the following libraries: tweepy, selenium, os, matplotlib, and networkx. </b>
 
+<strong>NOTE: You must have your twitter API keys and credentials stored as environment variables in order to run this code</strong>
